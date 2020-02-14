@@ -7,8 +7,14 @@
 //
 
 import Foundation
+
 //Bill Class Created
 class Bill
 {
     // Stored Properties
+    var billId : String
+    var billDate :  Date?
+    var billType : BillType
+    public var totalBillAmount : Float
+    
 }

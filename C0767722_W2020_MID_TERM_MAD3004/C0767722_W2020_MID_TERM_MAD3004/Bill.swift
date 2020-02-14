@@ -24,4 +24,11 @@ class Bill
         self.totalBillAmount = 0
     }
     
+    init(billId : Int,billDate : Date,billType : BillType,totalBillAmount : Float) {
+        self.billId = billId
+        self.billDate = billDate
+        self.billType = billType
+        self.totalBillAmount = totalBillAmount
+    }
+    
 }

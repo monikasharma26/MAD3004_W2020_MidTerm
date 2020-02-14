@@ -15,6 +15,7 @@
 		CE409B1223F66FF100F1334F /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE409B1123F66FF100F1334F /* Customer.swift */; };
 		CE409B1423F6730400F1334F /* BillType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE409B1323F6730400F1334F /* BillType.swift */; };
 		CE409B1623F6777400F1334F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE409B1523F6777400F1334F /* Date+Extension.swift */; };
+		CE409B1823F6790500F1334F /* Float+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE409B1723F6790500F1334F /* Float+Extension.swift */; };
 		CE766F2C23F60AB2008BF375 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE766F2B23F60AB2008BF375 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		CE409B1123F66FF100F1334F /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		CE409B1323F6730400F1334F /* BillType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillType.swift; sourceTree = "<group>"; };
 		CE409B1523F6777400F1334F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		CE409B1723F6790500F1334F /* Float+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Extension.swift"; sourceTree = "<group>"; };
 		CE766F2823F60AB2008BF375 /* C0767722_W2020_MID_TERM_MAD3004 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = C0767722_W2020_MID_TERM_MAD3004; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE766F2B23F60AB2008BF375 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +84,7 @@
 				CE409B1123F66FF100F1334F /* Customer.swift */,
 				CE409B1323F6730400F1334F /* BillType.swift */,
 				CE409B1523F6777400F1334F /* Date+Extension.swift */,
+				CE409B1723F6790500F1334F /* Float+Extension.swift */,
 			);
 			path = C0767722_W2020_MID_TERM_MAD3004;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				CE409B0823F66AEB00F1334F /* IDisplay.swift in Sources */,
 				CE409B1223F66FF100F1334F /* Customer.swift in Sources */,
+				CE409B1823F6790500F1334F /* Float+Extension.swift in Sources */,
 				CE409B0A23F66C2300F1334F /* Bill.swift in Sources */,
 				CE766F2C23F60AB2008BF375 /* main.swift in Sources */,
 				CE409B0C23F66E2700F1334F /* Mobile.swift in Sources */,

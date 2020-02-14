@@ -9,13 +9,15 @@
 import Foundation
 
 //Bill Class Created
-class Bill
+class Bill : IDisplay
 {
     // Stored Properties
     var billId : Int
     var billDate :  Date?
     var billType : BillType
     public var totalBillAmount : Float
+    
+    //Intialize Default Values
     init()
     {
         self.billId = 0
@@ -24,11 +26,16 @@ class Bill
         self.totalBillAmount = 0
     }
     
+    // Intialize Values with parameters
     init(billId : Int,billDate : Date,billType : BillType,totalBillAmount : Float) {
         self.billId = billId
         self.billDate = billDate
         self.billType = billType
         self.totalBillAmount = totalBillAmount
     }
+    
+    //implementation Of Protocal Method
+    
+    
     
 }

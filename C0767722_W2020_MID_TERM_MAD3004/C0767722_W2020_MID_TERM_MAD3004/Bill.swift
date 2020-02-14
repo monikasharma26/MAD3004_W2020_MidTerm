@@ -7,3 +7,8 @@
 //
 
 import Foundation
+//Bill Class Created
+class Bill
+{
+    // Stored Properties
+}

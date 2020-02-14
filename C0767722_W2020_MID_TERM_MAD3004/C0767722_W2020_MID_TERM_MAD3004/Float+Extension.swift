@@ -7,3 +7,11 @@
 //
 
 import Foundation
+// Extension float Added
+extension Float
+{
+public func currency() -> String
+   {
+       return String(format: "$%0.2f", self)
+   }
+}

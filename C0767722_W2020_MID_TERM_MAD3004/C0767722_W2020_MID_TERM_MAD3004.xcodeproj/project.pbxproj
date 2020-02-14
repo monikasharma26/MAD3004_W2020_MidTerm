@@ -14,6 +14,7 @@
 		CE409B1023F66F8800F1334F /* Hydro.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE409B0F23F66F8800F1334F /* Hydro.swift */; };
 		CE409B1223F66FF100F1334F /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE409B1123F66FF100F1334F /* Customer.swift */; };
 		CE409B1423F6730400F1334F /* BillType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE409B1323F6730400F1334F /* BillType.swift */; };
+		CE409B1623F6777400F1334F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE409B1523F6777400F1334F /* Date+Extension.swift */; };
 		CE766F2C23F60AB2008BF375 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE766F2B23F60AB2008BF375 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		CE409B0F23F66F8800F1334F /* Hydro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydro.swift; sourceTree = "<group>"; };
 		CE409B1123F66FF100F1334F /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		CE409B1323F6730400F1334F /* BillType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillType.swift; sourceTree = "<group>"; };
+		CE409B1523F6777400F1334F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		CE766F2823F60AB2008BF375 /* C0767722_W2020_MID_TERM_MAD3004 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = C0767722_W2020_MID_TERM_MAD3004; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE766F2B23F60AB2008BF375 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +81,7 @@
 				CE409B0F23F66F8800F1334F /* Hydro.swift */,
 				CE409B1123F66FF100F1334F /* Customer.swift */,
 				CE409B1323F6730400F1334F /* BillType.swift */,
+				CE409B1523F6777400F1334F /* Date+Extension.swift */,
 			);
 			path = C0767722_W2020_MID_TERM_MAD3004;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				CE409B1023F66F8800F1334F /* Hydro.swift in Sources */,
 				CE409B1423F6730400F1334F /* BillType.swift in Sources */,
 				CE409B0E23F66E6700F1334F /* Internet.swift in Sources */,
+				CE409B1623F6777400F1334F /* Date+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

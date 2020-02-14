@@ -7,4 +7,12 @@
 //
 
 import Foundation
-
+//Enum For Bill Type
+enum BillType
+{
+    case Mobile
+    case Internet
+    case Hydro
+    case Insurance
+    case None
+}

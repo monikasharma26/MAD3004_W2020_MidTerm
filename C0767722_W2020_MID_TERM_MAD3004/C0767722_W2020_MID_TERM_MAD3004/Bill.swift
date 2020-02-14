@@ -35,7 +35,9 @@ class Bill : IDisplay
     }
     
     //implementation Of Protocal Method
-    
+    func display() {
+        
+    }
     
     
 }

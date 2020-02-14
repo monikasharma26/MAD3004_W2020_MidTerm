@@ -12,9 +12,16 @@ import Foundation
 class Bill
 {
     // Stored Properties
-    var billId : String
+    var billId : Int
     var billDate :  Date?
     var billType : BillType
     public var totalBillAmount : Float
+    init()
+    {
+        self.billId = 0
+        self.billDate = Date()
+        self.billType = BillType.None
+        self.totalBillAmount = 0
+    }
     
 }

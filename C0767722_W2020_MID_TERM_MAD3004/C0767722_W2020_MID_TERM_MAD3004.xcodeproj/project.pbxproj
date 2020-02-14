@@ -10,6 +10,7 @@
 		CE409B0823F66AEB00F1334F /* IDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE409B0723F66AEB00F1334F /* IDisplay.swift */; };
 		CE409B0A23F66C2300F1334F /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE409B0923F66C2300F1334F /* Bill.swift */; };
 		CE409B0C23F66E2700F1334F /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE409B0B23F66E2700F1334F /* Mobile.swift */; };
+		CE409B0E23F66E6700F1334F /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE409B0D23F66E6700F1334F /* Internet.swift */; };
 		CE766F2C23F60AB2008BF375 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE766F2B23F60AB2008BF375 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		CE409B0723F66AEB00F1334F /* IDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDisplay.swift; sourceTree = "<group>"; };
 		CE409B0923F66C2300F1334F /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		CE409B0B23F66E2700F1334F /* Mobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
+		CE409B0D23F66E6700F1334F /* Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
 		CE766F2823F60AB2008BF375 /* C0767722_W2020_MID_TERM_MAD3004 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = C0767722_W2020_MID_TERM_MAD3004; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE766F2B23F60AB2008BF375 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +69,7 @@
 				CE409B0723F66AEB00F1334F /* IDisplay.swift */,
 				CE409B0923F66C2300F1334F /* Bill.swift */,
 				CE409B0B23F66E2700F1334F /* Mobile.swift */,
+				CE409B0D23F66E6700F1334F /* Internet.swift */,
 			);
 			path = C0767722_W2020_MID_TERM_MAD3004;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 				CE409B0A23F66C2300F1334F /* Bill.swift in Sources */,
 				CE766F2C23F60AB2008BF375 /* main.swift in Sources */,
 				CE409B0C23F66E2700F1334F /* Mobile.swift in Sources */,
+				CE409B0E23F66E6700F1334F /* Internet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

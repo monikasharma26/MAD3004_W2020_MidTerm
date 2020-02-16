@@ -75,18 +75,58 @@
 		CE766F2A23F60AB2008BF375 /* C0767722_W2020_MID_TERM_MAD3004 */ = {
 			isa = PBXGroup;
 			children = (
-				CE766F2B23F60AB2008BF375 /* main.swift */,
-				CE409B0723F66AEB00F1334F /* IDisplay.swift */,
-				CE409B0923F66C2300F1334F /* Bill.swift */,
-				CE409B0B23F66E2700F1334F /* Mobile.swift */,
-				CE409B0D23F66E6700F1334F /* Internet.swift */,
-				CE409B0F23F66F8800F1334F /* Hydro.swift */,
-				CE409B1123F66FF100F1334F /* Customer.swift */,
-				CE409B1323F6730400F1334F /* BillType.swift */,
-				CE409B1523F6777400F1334F /* Date+Extension.swift */,
-				CE409B1723F6790500F1334F /* Float+Extension.swift */,
+				CEB0832B23F9FB3B004C1CD6 /* Main */,
+				CEB0832A23F9FB2A004C1CD6 /* Protocoles */,
+				CEB0832923F9FB25004C1CD6 /* Extesnsions */,
+				CEB0832823F9FB20004C1CD6 /* Bills */,
+				CEB0832723F9FB14004C1CD6 /* Customer */,
 			);
 			path = C0767722_W2020_MID_TERM_MAD3004;
+			sourceTree = "<group>";
+		};
+		CEB0832723F9FB14004C1CD6 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				CE409B1123F66FF100F1334F /* Customer.swift */,
+			);
+			path = Customer;
+			sourceTree = "<group>";
+		};
+		CEB0832823F9FB20004C1CD6 /* Bills */ = {
+			isa = PBXGroup;
+			children = (
+				CE409B0923F66C2300F1334F /* Bill.swift */,
+				CE409B0D23F66E6700F1334F /* Internet.swift */,
+				CE409B1323F6730400F1334F /* BillType.swift */,
+				CE409B0F23F66F8800F1334F /* Hydro.swift */,
+				CE409B0B23F66E2700F1334F /* Mobile.swift */,
+			);
+			path = Bills;
+			sourceTree = "<group>";
+		};
+		CEB0832923F9FB25004C1CD6 /* Extesnsions */ = {
+			isa = PBXGroup;
+			children = (
+				CE409B1723F6790500F1334F /* Float+Extension.swift */,
+				CE409B1523F6777400F1334F /* Date+Extension.swift */,
+			);
+			path = Extesnsions;
+			sourceTree = "<group>";
+		};
+		CEB0832A23F9FB2A004C1CD6 /* Protocoles */ = {
+			isa = PBXGroup;
+			children = (
+				CE409B0723F66AEB00F1334F /* IDisplay.swift */,
+			);
+			path = Protocoles;
+			sourceTree = "<group>";
+		};
+		CEB0832B23F9FB3B004C1CD6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE766F2B23F60AB2008BF375 /* main.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

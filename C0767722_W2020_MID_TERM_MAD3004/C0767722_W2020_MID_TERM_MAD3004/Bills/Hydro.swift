@@ -9,5 +9,17 @@
 import Foundation
 class Hydro: Bill
 {
+    var billId: Int
+    
+    var billDate: Date?
+    
+    var billType: BillType
+    
+    var totalBillAmount: Float
+    
+    func display() -> String {
+        <#code#>
+    }
+    
 
 }

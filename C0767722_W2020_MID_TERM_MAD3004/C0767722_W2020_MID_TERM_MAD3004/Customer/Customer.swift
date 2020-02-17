@@ -8,8 +8,9 @@
 
 import Foundation
 class Customer : IDisplay {
+   
     var customerID:Int
-    var totalAmountToBePaid:Float
+    var totalAmountToBePaid:Float = 0
     var firstName:String
     var lastName:String
     var fullName:String
@@ -21,16 +22,65 @@ class Customer : IDisplay {
     }
     var emailID:String?
     
+   private lazy var customerBills = [Int:Bill]()
+    
+    //property added to calculate the total amount to be paid by customer.
+    var totalAmountToBePaidByCustomer:Float
+        {
+            get
+            {
+                if customerBills.count == 0
+                {
+                    return 0
+                }
+                for bill in customerBills.values
+                {
+                    totalAmountToBePaid += bill.totalBillAmount
+                }
+                return totalAmountToBePaid
+            }
+         }
+    
     init(customerID:Int, firstName:String, lastName:String, emailID:String) throws
     {
         self.customerID = customerID
         self.firstName = firstName
         self.lastName = lastName
-        if !self.isEmailValid(str: emailID)
+      if !isEmailValid(str: emailID)
         {
             throw CustomerError.emailInvalid
         }
         self.emailID = emailID
     }
+    
+    public func addBillToCustomer(bill: Bill)
+    {
+        customerBills.updateValue(bill, forKey: bill.billId)
+    }
+    
+    func display() -> String {
+            var output =  "Customer ID: \(customerID)\n" +
+                "Customer Full Name: \(fullName)\n" +
+            "Customer Email ID: \(emailID!)\n"
+            if customerBills.count == 0
+            {
+                output += "Customer Has No Bills."
+                return output
+            }
+
+         output += "\n            --Bill Information--\n" + "*************************\n".formatBills()
+        for customerBill in customerBills.values
+            {
+                output += ( (customerBill.display()).formatBills() + "\n")
+                output += "***********************************************\n".formatBills()
+        }
+
+            output += "                 Total Amount To Be Paid \(totalAmountToBePaidByCustomer.currency())\n" +
+                "***********************************************\n".formatBills()
+            
+            
+            return output
+        }
+       
     
 }

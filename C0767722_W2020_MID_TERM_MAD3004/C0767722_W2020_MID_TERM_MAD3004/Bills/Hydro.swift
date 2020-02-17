@@ -19,7 +19,7 @@ class Hydro: Bill{
     }
     var agencyName : String
     var unitConsumed : Float
-    let unitRate : Float = 10
+    let unitRate : Float = 0.50
     
     
     init(billId:Int, billDate:Date?,billType: BillType, agencyName : String, unitConsumed : Float) {

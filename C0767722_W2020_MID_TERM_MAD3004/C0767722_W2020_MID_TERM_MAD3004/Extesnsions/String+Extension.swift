@@ -9,7 +9,7 @@
 import Foundation
 enum Country
 {
-    case Canada, India, US
+    case Canada
     
 }
 
@@ -20,8 +20,17 @@ extension String
         switch(country)
         {
         case Country.Canada: return "+1\(self)"
-        case Country.India: return "+91\(self)"
-        case Country.US: return "+1\(self)"
         }
-}
+    }
+    
+    func formatBills() -> String
+    {
+        var output:String = ""
+        let lines = self.split(separator: "\n")
+        for line in lines
+        {
+            output += "          \(line)\n"
+        }
+        return output
+    }
 }

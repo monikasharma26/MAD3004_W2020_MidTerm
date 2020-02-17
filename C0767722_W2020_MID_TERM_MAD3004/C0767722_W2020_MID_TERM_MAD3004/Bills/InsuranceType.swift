@@ -7,7 +7,7 @@
 //
 
 import Foundation
-enum Insurancetype{
+enum InsuranceType{
     case Home
     case Car
     case Business

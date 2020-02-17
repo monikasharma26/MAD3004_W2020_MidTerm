@@ -8,3 +8,10 @@
 
 import Foundation
 
+//let dateFormatter = get
+
+//var c1bill2 = Internet(billId: 2, billDate: "12/10/12", billType: BillType.Internet, providerName: "Rogers", internetGBused: 500)
+
+var d = Internet(billId: 2, billDate: Date.from(year: 2000, month: 11, day: 12), billType: BillType.Internet, providerName: "Rogers", gbUsed: 500)
+
+print(d.display())

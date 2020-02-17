@@ -22,7 +22,7 @@ public class Internet : Bill
     }
     var providerName : String
     var gbUsed : Float
-    let internetRate : Float = 10
+    let internetRate : Float = 0.50
     
  
     init(billId:Int, billDate:Date?,billType: BillType, providerName : String, gbUsed : Float) {
@@ -46,9 +46,9 @@ public class Internet : Bill
         return "Bill ID: \(self.billId)\n" +
             "Bill Date: \(String(describing: (self.billDate)!.getForamttedDate()))\n" +
             "Bill Type: \(BillType.Internet)\n" +
-            "Total Bill Amount: \(totalBillAmount.currency())\n" +
             "Provider Name: \(providerName)\n" +
-            "Internet Usage: \(gbUsed.internetUnit())\n"
+            "Internet Usage: \(gbUsed.internetUnit())\n" +
+            "Total Bill Amount: \(totalBillAmount.currency())\n" 
     }
     
     

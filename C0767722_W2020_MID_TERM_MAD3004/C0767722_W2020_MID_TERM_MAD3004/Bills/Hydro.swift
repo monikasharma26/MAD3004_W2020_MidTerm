@@ -17,6 +17,10 @@ class Hydro: Bill
     
     var totalBillAmount: Float
     
+    var agencyName : String
+    var unitConsumed : Float
+    let unitRate : Float = 10
+    
     func display() -> String {
         <#code#>
     }

@@ -7,4 +7,8 @@
 //
 
 import Foundation
-
+enum Country
+{
+    case Canada, India, US
+    
+}

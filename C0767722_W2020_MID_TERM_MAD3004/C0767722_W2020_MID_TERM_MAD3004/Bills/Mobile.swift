@@ -7,6 +7,19 @@
 //
 
 import Foundation
-class  Mobile {
+class  Mobile : Bill {
+    var billId: Int
+    var billDate: Date?
+    var billType: BillType
+    var totalBillAmount: Float
+    
+    func calculateTotal() -> Float {
+        <#code#>
+    }
+    
+    func display() -> String {
+        <#code#>
+    }
+    
     
 }

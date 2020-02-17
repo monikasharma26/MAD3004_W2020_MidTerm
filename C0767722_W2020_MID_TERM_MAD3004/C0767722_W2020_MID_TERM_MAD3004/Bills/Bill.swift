@@ -15,6 +15,7 @@ protocol Bill : IDisplay
     var billDate :  Date? {get set}
     var billType : BillType {get}
     var totalBillAmount : Float {get }
+    func calculateTotal() -> Float
     
 }
 

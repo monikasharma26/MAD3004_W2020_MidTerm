@@ -12,6 +12,12 @@ class  Mobile : Bill {
     var billDate: Date?
     var billType: BillType
     var totalBillAmount: Float
+    {
+        get
+        {
+            return calculateTotal()
+        }
+    }
     var mobileManufacturerName:String
     var planName:String
     var mobileNumber:String
@@ -20,36 +26,37 @@ class  Mobile : Bill {
     let internetRate : Float = 10
     let minuteRate : Float = 0.5
     
-    init(billId:Int, billDate:Date?,billType: BillType,mobileManufacturerName:String, mobilePlanName:String, mobileNumber:String, internetDataUsed:Float, minutesUsed:Float){
+    init(billId:Int, billDate:Date?,billType: BillType,mobileManufacturerName:String, planName:String, mobileNumber:String, internetGBUsed:Float, minutesUsed:Float){
         self.billId = billId
         self.billDate = billDate
         self.billType = billType
         self.mobileManufacturerName = mobileManufacturerName
-        self.mobilePlanName = mobilePlanName
+        self.planName = planName
         self.mobileNumber = mobileNumber
-        self.internetDataUsed = internetDataUsed
+        self.internetGBUsed = internetGBUsed
         self.minutesUsed = minutesUsed
         
     }
     
     func calculateTotal() -> Float {
             var total : Float = 0
-            total = (internetGBused * self.internetRate) + ( Float(minuteUsed) * minuteRate )
+            total = (internetGBUsed * self.internetRate) + ( Float(minutesUsed) * minuteRate )
             return total
         }
-    }
+    
     
     func display() -> String {
        return "Bill ID: \(self.billId)\n" +
        "Bill Date: \(String(describing: (self.billDate)!.getForamttedDate()))\n" +
        "Bill Type: \(BillType.Internet)\n" +
         "Mobile Manufacturer Name: \(self.mobileManufacturerName)\n" +
-        "Mobile Plan Name: \(self.mobilePlanName)\n" +
+        "Mobile Plan Name: \(self.planName)\n" +
         "Mobile Number: \(self.mobileNumber)\n" +
-        "Internet Data Used: \(self.gbUsed.internetUnit())\n" +
+        "Internet Data Used: \(self.internetGBUsed.internetUnit())\n" +
         "Mintues Used: \(self.minutesUsed.minUnit())\n" +
-        "Total Bill Amount: \(self.totalBillAmount.currency())\n"ß
+        "Total Bill Amount: \(self.totalBillAmount.currency())\n"
     }
     
     
+
 }

@@ -17,7 +17,8 @@ class  Mobile : Bill {
     var mobileNumber:String
     var internetGBUsed:Float
     var minutesUsed:Float
-    
+    let internetRate : Float = 10
+    let minuteRate : Float = 0.5
     
     init(billId:Int, billDate:Date?,billType: BillType,mobileManufacturerName:String, mobilePlanName:String, mobileNumber:String, internetDataUsed:Float, minutesUsed:Float){
         self.billId = billId
@@ -32,7 +33,10 @@ class  Mobile : Bill {
     }
     
     func calculateTotal() -> Float {
-        <#code#>
+            var total : Float = 0
+            total = (internetGBused * self.internetRate) + ( Float(minuteUsed) * minuteRate )
+            return total
+        }
     }
     
     func display() -> String {

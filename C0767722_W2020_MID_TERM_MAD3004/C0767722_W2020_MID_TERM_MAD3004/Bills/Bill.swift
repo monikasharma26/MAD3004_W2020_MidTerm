@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+// Created Bill Class 
 protocol Bill : IDisplay
 {
     var billId : Int { get set}

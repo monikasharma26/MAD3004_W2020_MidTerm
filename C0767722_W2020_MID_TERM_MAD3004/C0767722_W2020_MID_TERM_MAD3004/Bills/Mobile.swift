@@ -40,7 +40,15 @@ class  Mobile : Bill {
     }
     
     func display() -> String {
-        <#code#>
+       return "Bill ID: \(self.billId)\n" +
+       "Bill Date: \(String(describing: (self.billDate)!.getForamttedDate()))\n" +
+       "Bill Type: \(BillType.Internet)\n" +
+        "Mobile Manufacturer Name: \(self.mobileManufacturerName)\n" +
+        "Mobile Plan Name: \(self.mobilePlanName)\n" +
+        "Mobile Number: \(self.mobileNumber)\n" +
+        "Internet Data Used: \(self.gbUsed.internetUnit())\n" +
+        "Mintues Used: \(self.minutesUsed.minUnit())\n" +
+        "Total Bill Amount: \(self.totalBillAmount.currency())\n"ß
     }
     
     

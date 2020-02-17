@@ -12,3 +12,16 @@ enum Country
     case Canada, India, US
     
 }
+
+// Extension Added For Countries
+extension String
+{
+    func withCountryCode(country:Country) -> String{
+        switch(country)
+        {
+        case Country.Canada: return "+1\(self)"
+        case Country.India: return "+91\(self)"
+        case Country.US: return "+1\(self)"
+        }
+}
+}

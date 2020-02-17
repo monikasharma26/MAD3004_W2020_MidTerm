@@ -22,6 +22,7 @@
 		CEB0833223FA5BB4004C1CD6 /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0833123FA5BB4004C1CD6 /* Validations.swift */; };
 		CEB0833423FA60A3004C1CD6 /* CustomerSingelton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0833323FA60A3004C1CD6 /* CustomerSingelton.swift */; };
 		CEB0833623FA6C0E004C1CD6 /* Insurance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0833523FA6C0E004C1CD6 /* Insurance.swift */; };
+		CEB0833823FA6CD2004C1CD6 /* InsuranceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0833723FA6CD2004C1CD6 /* InsuranceType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +54,7 @@
 		CEB0833123FA5BB4004C1CD6 /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
 		CEB0833323FA60A3004C1CD6 /* CustomerSingelton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSingelton.swift; sourceTree = "<group>"; };
 		CEB0833523FA6C0E004C1CD6 /* Insurance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insurance.swift; sourceTree = "<group>"; };
+		CEB0833723FA6CD2004C1CD6 /* InsuranceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsuranceType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				CE409B0F23F66F8800F1334F /* Hydro.swift */,
 				CE409B0B23F66E2700F1334F /* Mobile.swift */,
 				CEB0833523FA6C0E004C1CD6 /* Insurance.swift */,
+				CEB0833723FA6CD2004C1CD6 /* InsuranceType.swift */,
 			);
 			path = Bills;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				CE766F2C23F60AB2008BF375 /* main.swift in Sources */,
 				CEB0833023FA50B9004C1CD6 /* CustomerError.swift in Sources */,
 				CEB0833423FA60A3004C1CD6 /* CustomerSingelton.swift in Sources */,
+				CEB0833823FA6CD2004C1CD6 /* InsuranceType.swift in Sources */,
 				CEB0833623FA6C0E004C1CD6 /* Insurance.swift in Sources */,
 				CE409B0C23F66E2700F1334F /* Mobile.swift in Sources */,
 				CE409B1023F66F8800F1334F /* Hydro.swift in Sources */,

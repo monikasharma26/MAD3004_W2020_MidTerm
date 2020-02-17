@@ -7,3 +7,23 @@
 //
 
 import Foundation
+class CustomerSingelton
+{
+    static var customers = Array<Customer>()
+      static func addCustomer(customer:Customer)
+      {
+          customers.append(customer)
+      }
+      static func getCustomerByID(id:Int) -> Customer?
+      {
+          for customer in customers
+          {
+              if (id == customer.customerID)
+              {
+                  return customer
+              }
+          }
+          return nil
+      }
+      
+}

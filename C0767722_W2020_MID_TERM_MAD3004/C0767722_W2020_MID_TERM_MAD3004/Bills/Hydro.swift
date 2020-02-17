@@ -10,16 +10,23 @@ import Foundation
 class Hydro: Bill
 {
     var billId: Int
-    
     var billDate: Date?
-    
     var billType: BillType
-    
     var totalBillAmount: Float
-    
     var agencyName : String
     var unitConsumed : Float
     let unitRate : Float = 10
+    
+    
+    init(billId:Int, billDate:Date?,billType: BillType, agencyName : String, unitConsumed : Float) {
+        self.billId = billId
+        self.billDate = billDate
+        self.billType = billType
+        self.agencyName = agencyName
+        self.unitConsumed = unitConsumed
+    
+    }
+    
     
     func display() -> String {
         <#code#>

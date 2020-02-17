@@ -39,7 +39,12 @@ class Hydro: Bill{
     
     
     func display() -> String {
-        return " "
+       return "Bill ID: \(self.billId)\n" +
+                   "Bill Date: \(String(describing: (self.billDate)!.getForamttedDate()))\n" +
+                   "Bill Type: \(BillType.Hydro)\n" +
+                   "Agency Name: \(agencyName)\n" +
+                   "Unit Consumed: \(unitConsumed.formatUnits())\n" +
+                   "Total Bill Amount: \(totalBillAmount.currency())\n"
     }
     
 }

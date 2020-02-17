@@ -9,5 +9,6 @@
 import Foundation
 //Created Protocol
 protocol IDisplay {
-    func display()
+    func display() -> String
+    
 }

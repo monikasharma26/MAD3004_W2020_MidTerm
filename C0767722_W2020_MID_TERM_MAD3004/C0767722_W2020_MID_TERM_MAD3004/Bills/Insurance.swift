@@ -22,7 +22,7 @@ class Insurance : Bill{
     var Insurancetype : InsuranceType
     var startDate : Date
     var endDate : Date
-
+   
     init(billId:Int, billDate:Date?,billType: BillType,provider:String, Insurancetype:InsuranceType,startDate:Date, endDate:Date){
         self.billId = billId
         self.billDate = billDate
@@ -37,8 +37,9 @@ class Insurance : Bill{
     
     func calculateTotal()->Float
     {
-        let interval = endDate.timeIntervalSince(startDate)
-        return Float(5*interval)
+        let months = Date.dateDifference(startDate: startDate, endDate: endDate)
+        return (10 * months.floatValue)
+      
     }
 
     func display() -> String {

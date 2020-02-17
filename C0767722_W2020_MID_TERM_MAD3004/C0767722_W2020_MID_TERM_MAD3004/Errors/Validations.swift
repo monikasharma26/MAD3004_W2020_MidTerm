@@ -15,3 +15,4 @@ public func isEmailValid(str:String) -> Bool {
        let test = NSPredicate(format:"SELF MATCHES %@", regx)
        return test.evaluate(with: str)
    }
+

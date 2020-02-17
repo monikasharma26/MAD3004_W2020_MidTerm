@@ -25,6 +25,14 @@ extension Date
         dateComponents.day = day
         return calendar.date(from: dateComponents) ?? nil
     }
-   
+   public static func dateDifference(startDate: Date, endDate: Date) -> String {
+       let formatter = DateComponentsFormatter()
+       formatter.allowedUnits = [.month]
+       formatter.unitsStyle = .full
+       if let differenceString = formatter.string(from: startDate, to: endDate) {
+           return differenceString
+       }
+       return "No Date Found"
+   }
    
 }

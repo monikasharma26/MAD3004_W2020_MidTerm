@@ -60,8 +60,13 @@ class Customer : IDisplay {
     
     func display() -> String {
             var output =  "Customer ID: \(customerID)\n" +
-                "Customer Full Name: \(fullName)\n" +
-            "Customer Email ID: \(emailID!)\n"
+                "Customer Full Name: \(fullName)\n"
+                if let email = emailID, email.isValidEmail {
+                   output +=  "Customer Email ID: \(emailID!)\n"
+                } else {
+                  output +=  "Please enter correct email address"
+                }
+           
             if customerBills.count == 0
             {
                 output += "Customer Has No Bills."

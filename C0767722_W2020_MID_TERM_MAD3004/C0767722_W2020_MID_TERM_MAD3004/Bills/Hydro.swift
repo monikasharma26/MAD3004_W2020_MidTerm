@@ -7,12 +7,16 @@
 //
 
 import Foundation
-class Hydro: Bill
-{
+class Hydro: Bill{
     var billId: Int
     var billDate: Date?
     var billType: BillType
-    var totalBillAmount: Float
+    var totalBillAmount: Float{
+        get
+        {
+            return calculateTotal()
+        }
+    }
     var agencyName : String
     var unitConsumed : Float
     let unitRate : Float = 10
@@ -27,10 +31,16 @@ class Hydro: Bill
     
     }
     
+    func calculateTotal() -> Float {
+            var total : Float = 0
+            total = self.unitConsumed * self.unitRate
+            return total
+        }
+    
     
     func display() -> String {
-        <#code#>
+        return " "
     }
     
-
 }
+

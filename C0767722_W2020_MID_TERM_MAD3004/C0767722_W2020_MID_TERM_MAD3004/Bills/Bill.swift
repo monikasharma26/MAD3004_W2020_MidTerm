@@ -13,21 +13,20 @@ protocol Bill : IDisplay
 {
     var billId : Int { get set}
     var billDate :  Date? {get set}
-    var billType : BillType {get set}
-    var totalBillAmount : Float {get set}
+    var billType : BillType {get}
+    var totalBillAmount : Float {get }
     
 }
 
-func display()
+func display() -> String
 {
-        
+        return ""
 }
 
 func calculateTotal()->Float
 {
     let total : Float = 0
-    self.totalBillAmount = total
+   // totalBillAmount = total
     return total
+
 }
-
-

@@ -10,8 +10,22 @@ import Foundation
 // Extension float Added
 extension Float
 {
-public func currency() -> String
-   {
-       return String(format: "$%0.2f", self)
-   }
+        public func currency() -> String
+        {
+           return String(format: "$%0.2f", self)
+        }
+       public func formatUnits() -> String
+       {
+          // return String(format : "sel units", self)
+            return "\(self) Units"
+       }
+       public func internetUnit() -> String
+       {
+         //  return String(format : "%0.0f GB", self)
+            return "\(self) GB"
+       }
+        public func minUnit() -> String
+        {
+        return "\(self) Minutes"
+        }
 }

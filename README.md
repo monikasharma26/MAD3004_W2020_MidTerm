@@ -15,7 +15,7 @@
 * **InsuranceType Class**: Enum class to hold the type of Insurance takne (Home ,Car, Business)
 
 ### *Protocoloes Group*<br>
-* ** IDisplay Class**: protocol containing one method func display() -> String
+* **IDisplay Class**: protocol containing one method func display() -> String
 * **Float+Extension Class**: Class used for encrption and decryption of passwords
 
 ### *Extension Group*<br>

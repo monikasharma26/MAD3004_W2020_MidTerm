@@ -42,12 +42,17 @@ class Customer : IDisplay {
             }
          }
     
-    init(customerID:Int, firstName:String, lastName:String, emailID:String) 
+    init(customerID:Int, firstName:String, lastName:String, emailID:String) throws
     {
         self.customerID = customerID
         self.firstName = firstName
         self.lastName = lastName
-        self.emailID = emailID
+        if emailID.isValidEmail() {
+                   self.emailID = emailID
+               }
+                else
+                { throw CustomerError.emailInvalid   }
+        
     }
     
     public func addBillToCustomer(bill: Bill)
@@ -104,10 +109,11 @@ class Customer : IDisplay {
     func display() -> String {
             var output =  "Customer ID: \(customerID)\n" +
                 "Customer Full Name: \(fullName)\n"
-                if let email = emailID, email.isValidEmail {
+                if let email = emailID, email.isValidEmail() {
                    output +=  "Customer Email ID: \(emailID!)\n"
                 } else {
-                  output +=  "Please enter correct email address"
+                  output +=  "Please enter correct email address: \(emailID!)"
+                    return output
                 }
            
             if customerBills.count == 0

@@ -37,7 +37,7 @@ class  Mobile : Bill {
         {
             throw CustomerError.mobileInvalid
         }
-       
+        self.mobileNumber=mobileNumber
         self.internetGBUsed = internetGBUsed
         self.minutesUsed = minutesUsed
         
@@ -56,7 +56,7 @@ class  Mobile : Bill {
         "Bill Type: \(BillType.Internet)\n" +
         "Mobile Manufacturer Name: \(self.mobileManufacturerName)\n" +
         "Mobile Plan Name: \(self.planName)\n" +
-        "Mobile Number: \(self.mobileNumber)\n" +
+        "Mobile Number: \(self.mobileNumber!)\n" +
         "Internet Data Used: \(self.internetGBUsed.internetUnit())\n" +
         "Mintues Used: \(self.minutesUsed.minUnit())\n" +
         "Total Bill Amount: \(self.totalBillAmount.currency())\n"

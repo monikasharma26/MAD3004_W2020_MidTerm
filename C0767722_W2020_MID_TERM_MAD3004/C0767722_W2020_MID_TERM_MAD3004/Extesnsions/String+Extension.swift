@@ -16,13 +16,7 @@ enum Country
 // Extension Added For Countries
 extension String
 {
-    func withCountryCode(country:Country) -> String{
-        switch(country)
-        {
-        case Country.Canada: return "+1\(self)"
-        }
-    }
-    
+
     func formatBills() -> String
     {
         var output:String = ""
@@ -33,6 +27,7 @@ extension String
         }
         return output
     }
+    
     public var floatValue: Float {
         return (self as NSString).floatValue
     }

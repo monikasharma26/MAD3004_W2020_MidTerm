@@ -19,7 +19,6 @@
 		CE766F2C23F60AB2008BF375 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE766F2B23F60AB2008BF375 /* main.swift */; };
 		CEB0832D23FA18D8004C1CD6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0832C23FA18D8004C1CD6 /* String+Extension.swift */; };
 		CEB0833023FA50B9004C1CD6 /* CustomerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0832F23FA50B9004C1CD6 /* CustomerError.swift */; };
-		CEB0833223FA5BB4004C1CD6 /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0833123FA5BB4004C1CD6 /* Validations.swift */; };
 		CEB0833623FA6C0E004C1CD6 /* Insurance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0833523FA6C0E004C1CD6 /* Insurance.swift */; };
 		CEB0833823FA6CD2004C1CD6 /* InsuranceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0833723FA6CD2004C1CD6 /* InsuranceType.swift */; };
 /* End PBXBuildFile section */
@@ -50,7 +49,6 @@
 		CE766F2B23F60AB2008BF375 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CEB0832C23FA18D8004C1CD6 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		CEB0832F23FA50B9004C1CD6 /* CustomerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerError.swift; sourceTree = "<group>"; };
-		CEB0833123FA5BB4004C1CD6 /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
 		CEB0833523FA6C0E004C1CD6 /* Insurance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insurance.swift; sourceTree = "<group>"; };
 		CEB0833723FA6CD2004C1CD6 /* InsuranceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsuranceType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				CEB0832F23FA50B9004C1CD6 /* CustomerError.swift */,
-				CEB0833123FA5BB4004C1CD6 /* Validations.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -224,7 +221,6 @@
 				CE409B1423F6730400F1334F /* BillType.swift in Sources */,
 				CE409B0E23F66E6700F1334F /* Internet.swift in Sources */,
 				CE409B1623F6777400F1334F /* Date+Extension.swift in Sources */,
-				CEB0833223FA5BB4004C1CD6 /* Validations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

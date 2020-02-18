@@ -84,8 +84,7 @@ let customer1BillInternet = Internet(billId: 1001, billDate: Date.from(year: 201
     }
     //Display Sorted Customer With TotalBil
      Customer.sortCustomerUsingTotal()
-    
-    print("\n\n\n")
+    print("\n")
     
 }
 catch CustomerError.emailInvalid

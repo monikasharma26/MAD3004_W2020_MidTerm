@@ -92,7 +92,7 @@ class Customer : IDisplay {
         
        }
     
-    //Display Sort By Total
+    
     func displayNameSortedByTotal() {
            
         print("\t\tCustomer Id: \(customerID)\n" + "\t\tCustome Name: \(fullName)\n" + "\t\tCustomer Email: \(emailID!))\n")

@@ -8,17 +8,19 @@
 
 import Foundation
     
+do
+{
 let customer1BillInternet = Internet(billId: 1001, billDate: Date.from(year: 2019, month: 10, day: 11)!,billType: BillType.Internet,   providerName:"Fido", gbUsed: 7)
     
     let customer1BillHydro = Hydro(billId: 1002, billDate: Date.from(year: 2020, month: 01, day: 12)!,billType: BillType.Hydro,agencyName: "Brampton power", unitConsumed: 21)
     
-    let customer1BillMobile = Mobile(billId: 1003,billDate: Date.from(year: 2020, month: 02, day: 02)!,billType: BillType.Mobile, mobileManufacturerName: "Apple Inc.", planName: "Medium Gig", mobileNumber: "4378766883", internetGBUsed: 4, minutesUsed: 40)
+    let customer1BillMobile = try Mobile(billId: 1003,billDate: Date.from(year: 2020, month: 02, day: 02)!,billType: BillType.Mobile, mobileManufacturerName: "Apple Inc.", planName: "Medium Gig", mobileNumber: "4378766883", internetGBUsed: 4, minutesUsed: 40)
     
    //creating object for insurance
     let customer1BillInsurance = Insurance(billId: 1004,billDate: Date.from(year: 2020, month: 02, day: 12)!,billType: BillType.Insurance,provider: "HDFC", Insurancetype: InsuranceType.Home, startDate: Date.from(year: 2019, month: 01, day: 31)!, endDate: Date.from(year: 2020, month: 01, day: 31)! )
 
     // Created Objects For Customer 2 with 3 bills
-    let customer2BillMobile = Mobile(billId: 1005,billDate: Date.from(year: 2019, month: 10, day: 09)!,billType: BillType.Mobile ,mobileManufacturerName: "Google Pixel", planName: "VOLTE", mobileNumber: "9888439826", internetGBUsed: 2, minutesUsed: 60)
+    let customer2BillMobile = try Mobile(billId: 1005,billDate: Date.from(year: 2019, month: 10, day: 09)!,billType: BillType.Mobile ,mobileManufacturerName: "Google Pixel", planName: "VOLTE", mobileNumber: "9888439826", internetGBUsed: 2, minutesUsed: 60)
     
     let customer2BillHydro = Hydro(billId: 1006,billDate: Date.from(year: 2020, month: 01, day: 10)!,billType: BillType.Hydro, agencyName: "Pickering", unitConsumed: 90)
     
@@ -26,12 +28,12 @@ let customer1BillInternet = Internet(billId: 1001, billDate: Date.from(year: 201
     
 
     // Created Objects For Customer 3 with 2 bills
-    let customer3BillMobile = Mobile(billId: 1008,billDate: Date.from(year: 2019, month: 11, day: 19)!,billType: BillType.Mobile ,mobileManufacturerName: "Samsung", planName: "BigGig", mobileNumber: "6562341234", internetGBUsed: 8, minutesUsed: 80)
+    let customer3BillMobile = try Mobile(billId: 1008,billDate: Date.from(year: 2019, month: 11, day: 19)!,billType: BillType.Mobile ,mobileManufacturerName: "Samsung", planName: "BigGig", mobileNumber: "6562341234", internetGBUsed: 8, minutesUsed: 80)
     
     let customer3BillHydro = Hydro(billId: 1009,billDate: Date.from(year: 2020, month: 01, day: 10)!,billType: BillType.Hydro, agencyName: "Toronto Power", unitConsumed: 40)
 
     // Created Objects For Customer 4 with 1 bill
-    let customer4BillMobile = Mobile(billId: 1010,billDate: Date.from(year: 2020, month: 01, day: 30)!,billType: BillType.Mobile ,mobileManufacturerName: "One Plus", planName: "Fido", mobileNumber: "4563243456", internetGBUsed: 1, minutesUsed: 160)
+    let customer4BillMobile = try Mobile(billId: 1010,billDate: Date.from(year: 2020, month: 01, day: 30)!,billType: BillType.Mobile ,mobileManufacturerName: "One Plus", planName: "Fido", mobileNumber: "4563243456", internetGBUsed: 1, minutesUsed: 160)
 
     // Crated First Customer
     let customer1 = Customer(customerID: 101, firstName: "Monika", lastName: "Sharma", emailID: "monika@gmail.com")
@@ -64,8 +66,11 @@ let customer1BillInternet = Internet(billId: 1001, billDate: Date.from(year: 201
     Customer.addCustomer(customer: customer3)
     Customer.addCustomer(customer: customer4)
     Customer.addCustomer(customer: customer5)
+    
+    //Remove Particular Customer
+    Customer.removeCustomer(customer: customer5)
     let customerIDs = [101,102,103,104,105,106]
-   
+   // get Customer By ID
     for customerID in customerIDs
     {
         if let customer = Customer.getCustomerByID(id: customerID)
@@ -80,7 +85,21 @@ let customer1BillInternet = Internet(billId: 1001, billDate: Date.from(year: 201
     //Display Sorted Customer With TotalBil
      Customer.sortCustomerUsingTotal()
     
-
+    print("\n\n\n")
+    
+}
+catch CustomerError.emailInvalid
+{
+    print("Email is Invalid")
+}
+catch CustomerError.mobileInvalid
+{
+    print("Mobile Number is Invalid")
+}
+catch
+{
+    print("Error Occured")
+}
     
 
 

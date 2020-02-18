@@ -20,20 +20,24 @@ class  Mobile : Bill {
     }
     var mobileManufacturerName:String
     var planName:String
-    var mobileNumber:String
+    var mobileNumber:String!
     
     var internetGBUsed:Float
     var minutesUsed:Float
     let internetRate : Float = 10
     let minuteRate : Float = 0.5
     
-    init(billId:Int, billDate:Date?,billType: BillType,mobileManufacturerName:String, planName:String, mobileNumber:String, internetGBUsed:Float, minutesUsed:Float){
+    init(billId:Int, billDate:Date?,billType: BillType,mobileManufacturerName:String, planName:String, mobileNumber:String, internetGBUsed:Float, minutesUsed:Float) throws{
         self.billId = billId
         self.billDate = billDate
         self.billType = billType
         self.mobileManufacturerName = mobileManufacturerName
         self.planName = planName
-        self.mobileNumber = mobileNumber
+        if mobileNumber.count != 10
+        {
+            throw CustomerError.mobileInvalid
+        }
+       
         self.internetGBUsed = internetGBUsed
         self.minutesUsed = minutesUsed
         

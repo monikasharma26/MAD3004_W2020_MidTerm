@@ -7,9 +7,12 @@
 * **Customer Class**: Holds details of customer and implemented  Protocol
 
 ### *Bills Group*<br>
-* **Mobiile Class**: Contains all stored Properties of itsemf and of bill protocol and implment methods
-* **Hydro Class**: Contains all stored Properties of itsemf and of bill protocol and implment methods
-* **Internet Class**: Contains all stored Properties of itsemf and of bill protocol and implment methods
+* **Mobiile Class**: Contains all stored Properties of itsemf and of bill protocol and implment methods (Defautlt Value for 
+    internetRate =0.5)
+* **Hydro Class**: Contains all stored Properties of itsemf and of bill protocol and implment methods (Defautlt Value for 
+    internetRate =0.5)
+* **Internet Class**: Contains all stored Properties of itsemf and of bill protocol and implment methods(Defautlt Value for 
+    internetRate =10, minuteRate= 0.5)
 * **BillType Class**: Enum class to hold the type of Bill like (Mobile , Internet , Hydro , Insurance)
 * **Insurance Class**: Contains all stored Properties of itsemf and of bill protocol and implment methods
 * **InsuranceType Class**: Enum class to hold the type of Insurance takne (Home ,Car, Business)

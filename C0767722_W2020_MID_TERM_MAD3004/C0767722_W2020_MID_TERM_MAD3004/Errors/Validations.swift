@@ -16,3 +16,4 @@ public func isEmailValid(str:String) -> Bool {
        return test.evaluate(with: str)
    }
 
+

@@ -37,18 +37,18 @@ extension String
         return (self as NSString).floatValue
     }
     
-    var isValidNumber: Bool {
-        do {
-            let detector = try NSDataDetector(types: NSTextCheckingResult.CheckingType.phoneNumber.rawValue)
-            let matches = detector.matches(in: self, options: [], range: NSMakeRange(0, count))
-            if let res = matches.first {
-                return res.resultType == .phoneNumber && res.range.location == 0 && res.range.length == count && count == 10
-            } else {
-                return false
+    
+    public func isvalidPhoneNumber() -> Bool
+    {
+        var flag = false
+        if self.count==10 {
+            let number = Int(self)
+            if number != nil {
+                
+                flag = true
             }
-        } catch {
-            return false
         }
+        return flag
     }
     
     var isValidEmail: Bool {

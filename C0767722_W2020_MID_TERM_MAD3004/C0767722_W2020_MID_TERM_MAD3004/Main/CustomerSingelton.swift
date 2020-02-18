@@ -9,21 +9,35 @@
 import Foundation
 class CustomerSingelton
 {
-    static var customers = Array<Customer>()
-      static func addCustomer(customer:Customer)
-      {
-          customers.append(customer)
-      }
+    
+    static var custDictionary = [Int: Customer]()
+    
+      
+    
       static func getCustomerByID(id:Int) -> Customer?
       {
-          for customer in customers
+          for (k,v) in custDictionary
           {
-              if (id == customer.customerID)
+             if id == k
               {
-                  return customer
+                return v
               }
+            
           }
           return nil
       }
+    static func sortCustomerUsingTotal() {
+           print("")
+           print("Customer details Sorted total bill to be paid\n")
+           let customers = custDictionary.sorted(by: {a,b in
+               return a.value.totalAmountToBePaidByCustomer > b.value.totalAmountToBePaidByCustomer
+           })
+           
+           for newList in customers{
+               newList.value.displayNameSortedByTotal()
+           }
+       }
+        
+    
       
 }

@@ -7,51 +7,68 @@
 //
 
 import Foundation
+    
+let customer1BillInternet = Internet(billId: 1001, billDate: Date.from(year: 2019, month: 10, day: 11)!,billType: BillType.Internet,   providerName:"Fido", gbUsed: 7)
+    
+    let customer1BillHydro = Hydro(billId: 1002, billDate: Date.from(year: 2020, month: 01, day: 12)!,billType: BillType.Hydro,agencyName: "Brampton power", unitConsumed: 21)
+    
+    let customer1BillMobile = Mobile(billId: 1003,billDate: Date.from(year: 2020, month: 02, day: 02)!,billType: BillType.Mobile, mobileManufacturerName: "Apple Inc.", planName: "Medium Gig", mobileNumber: "4378766883", internetGBUsed: 4, minutesUsed: 40)
+    
+   //creating object for insurance
+    let customer1BillInsurance = Insurance(billId: 1004,billDate: Date.from(year: 2020, month: 02, day: 12)!,billType: BillType.Insurance,provider: "HDFC", Insurancetype: InsuranceType.Home, startDate: Date.from(year: 2019, month: 01, day: 31)!, endDate: Date.from(year: 2020, month: 01, day: 31)! )
 
-do
-{
+    // Created Objects For Customer 2 with 3 bills
+    let customer2BillMobile = Mobile(billId: 1005,billDate: Date.from(year: 2019, month: 10, day: 09)!,billType: BillType.Mobile ,mobileManufacturerName: "Google Pixel", planName: "VOLTE", mobileNumber: "9888439826", internetGBUsed: 2, minutesUsed: 60)
     
-    let bill1 = Internet(billId: 1001, billDate: Date.from(year: 2000, month: 11, day: 12)!,billType: BillType.Internet,   providerName:"Fido", gbUsed: 10)
+    let customer2BillHydro = Hydro(billId: 1006,billDate: Date.from(year: 2020, month: 01, day: 10)!,billType: BillType.Hydro, agencyName: "Pickering", unitConsumed: 90)
     
-    let bill2 = Hydro(billId: 1003, billDate: Date.from(year: 2000, month: 11, day: 12)!,billType: BillType.Hydro,agencyName: "Northyork power", unitConsumed: 210)
+    let customer2BillInternet = Internet(billId: 1007,billDate: Date.from(year: 2019, month: 08, day: 01)!,billType: BillType.Internet ,providerName: "Dell", gbUsed: 6)
     
-    let bill3 = try Mobile(billId: 1002,billDate: Date.from(year: 2000, month: 11, day: 12)!,billType: BillType.Mobile, mobileManufacturerName: "Apple Inc.", planName: "Medium Gig", mobileNumber: "4379716883", internetGBUsed: 10, minutesUsed: 400)
+
+    // Created Objects For Customer 3 with 2 bills
+    let customer3BillMobile = Mobile(billId: 1008,billDate: Date.from(year: 2019, month: 11, day: 19)!,billType: BillType.Mobile ,mobileManufacturerName: "Samsung", planName: "BigGig", mobileNumber: "6562341234", internetGBUsed: 8, minutesUsed: 80)
     
-    let bill4 = try Mobile(billId: 1004,billDate: Date.from(year: 2000, month: 11, day: 12)!,billType: BillType.Mobile ,mobileManufacturerName: "Google Pixel", planName: "VOLTE", mobileNumber: "9888439826", internetGBUsed: 10, minutesUsed: 80)
+    let customer3BillHydro = Hydro(billId: 1009,billDate: Date.from(year: 2020, month: 01, day: 10)!,billType: BillType.Hydro, agencyName: "Toronto Power", unitConsumed: 40)
+
+    // Created Objects For Customer 4 with 1 bill
+    let customer4BillMobile = Mobile(billId: 1010,billDate: Date.from(year: 2020, month: 01, day: 30)!,billType: BillType.Mobile ,mobileManufacturerName: "One Plus", planName: "Fido", mobileNumber: "4563243456", internetGBUsed: 1, minutesUsed: 160)
+
+    // Crated First Customer
+    let customer1 = Customer(customerID: 101, firstName: "Monika", lastName: "Sharma", emailID: "monika@gmail.com")
     
-    let bill5 = Hydro(billId: 1005,billDate: Date.from(year: 2000, month: 11, day: 12)!,billType: BillType.Hydro, agencyName: "TSSPDCL", unitConsumed: 490)
+    //Added 4 Bill To Customer1
+    customer1.addBillToCustomer(bill: customer1BillMobile)
+    customer1.addBillToCustomer(bill: customer1BillHydro)
+    customer1.addBillToCustomer(bill: customer1BillInternet)
+    customer1.addBillToCustomer(bill: customer1BillInsurance)
     
-    let bill6 = Internet(billId: 1006,billDate: Date.from(year: 2000, month: 11, day: 12)!,billType: BillType.Internet ,providerName: "Bell", gbUsed: 23)
+     
+    let customer2 = Customer(customerID: 102, firstName: "Ikroop", lastName: "virk", emailID: "roop@gmail.com")
+    //Added 3 Bill To Customer2
+    customer2.addBillToCustomer(bill: customer2BillHydro)
+    customer2.addBillToCustomer(bill: customer2BillMobile)
+    customer2.addBillToCustomer(bill: customer2BillInternet)
     
-    let customer1 = try Customer(customerID: 101, firstName: "Monika", lastName: "Sharma", emailID: "monika@gmail.com")
+    let customer3 = Customer(customerID: 103, firstName: "Kritima", lastName: "Kukreja", emailID: "kritima@gmail.com")
+    //Added 2 Bill To Customer3
+    customer3.addBillToCustomer(bill: customer3BillHydro)
+    customer3.addBillToCustomer(bill: customer3BillMobile)
     
-    //creating object for insurance
-    let bill7 = Insurance(billId: 1007,billDate: Date.from(year: 2000, month: 11, day: 12)!,billType: BillType.Insurance,provider: "HDFC", Insurancetype: InsuranceType.Home, startDate: Date.from(year: 2000, month: 11, day: 11)!, endDate: Date.from(year: 2001, month: 12, day: 12)! )
-    
-    customer1.addBillToCustomer(bill: bill1)
-    customer1.addBillToCustomer(bill: bill2)
-    customer1.addBillToCustomer(bill: bill3)
-    customer1.addBillToCustomer(bill: bill7)
-    
-    let customer2 = try Customer(customerID: 102, firstName: "Ikroop", lastName: "virk", emailID: "roop@gmail.com")
-    
-    customer2.addBillToCustomer(bill: bill4)
-    customer2.addBillToCustomer(bill: bill5)
-    
-    let customer3 = try Customer(customerID: 103, firstName: "Kritima", lastName: "Kukreja", emailID: "kritima@outlook.com")
-    
-    customer3.addBillToCustomer(bill: bill6)
-    
-    CustomerSingelton.addCustomer(customer: customer1)
-    CustomerSingelton.addCustomer(customer: customer2)
-    CustomerSingelton.addCustomer(customer: customer3)
-    CustomerSingelton.addCustomer(customer: try Customer(customerID: 104, firstName: "Aman", lastName: "Kaur", emailID: "aman@gmail.com"))
-    
-    
-    let customerIDs = [101,102,103,104,105]
+    let customer4 = Customer(customerID: 104, firstName: "Aman", lastName: "Kaur", emailID: "aman@gmail.com")
+     //Added 1 Bill To Customer4
+    customer4.addBillToCustomer(bill: customer4BillMobile)
+        
+    let customer5 = Customer(customerID: 106, firstName: "Anmol", lastName: "Singh", emailID: "anmol@gmail.com")
+    Customer.addCustomer(customer: customer1)
+    Customer.addCustomer(customer: customer2)
+    Customer.addCustomer(customer: customer3)
+    Customer.addCustomer(customer: customer4)
+    Customer.addCustomer(customer: customer5)
+    let customerIDs = [101,102,103,104,105,106]
+   
     for customerID in customerIDs
     {
-        if let customer = CustomerSingelton.getCustomerByID(id: customerID)
+        if let customer = Customer.getCustomerByID(id: customerID)
         {
             print(customer.display())
             print("\n\n")
@@ -60,16 +77,10 @@ do
             print("Customer Not Found: Customer ID: \(customerID)\n\n")
         }
     }
-}
-catch CustomerError.emailInvalid
-{
-    print("Email is Invalid")
-}
-catch CustomerError.mobileInvalid
-{
-    print("Mobile Number is Invalid")
-}
-catch
-{
-    print("Error Occured")
-}
+    //Display Sorted Customer With TotalBil
+     Customer.sortCustomerUsingTotal()
+    
+
+    
+
+

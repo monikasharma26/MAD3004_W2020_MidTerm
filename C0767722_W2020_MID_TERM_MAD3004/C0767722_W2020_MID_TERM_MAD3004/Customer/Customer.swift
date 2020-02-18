@@ -22,7 +22,8 @@ class Customer : IDisplay {
     }
     var emailID:String?
     
-   private lazy var customerBills = [Int:Bill]()
+   private  lazy var customerBills = [Int:Bill]()
+    static var custDictionary = [Int: Customer]()
     
     //property added to calculate the total amount to be paid by customer.
     var totalAmountToBePaidByCustomer:Float
@@ -41,15 +42,11 @@ class Customer : IDisplay {
             }
          }
     
-    init(customerID:Int, firstName:String, lastName:String, emailID:String) throws
+    init(customerID:Int, firstName:String, lastName:String, emailID:String) 
     {
         self.customerID = customerID
         self.firstName = firstName
         self.lastName = lastName
-      if !isEmailValid(str: emailID)
-        {
-            throw CustomerError.emailInvalid
-        }
         self.emailID = emailID
     }
     
@@ -57,6 +54,52 @@ class Customer : IDisplay {
     {
         customerBills.updateValue(bill, forKey: bill.billId)
     }
+        
+    static func addCustomer(customer: Customer){
+      custDictionary.updateValue(customer, forKey: customer.customerID)
+      }
+        
+    static func removeCustomer(customer: Customer){
+         custDictionary.removeValue(forKey: customer.customerID)
+         }
+    
+    static func getCustomerByID(id:Int) -> Customer?
+      {
+          for (k,v) in custDictionary
+          {
+             if id == k
+              {
+                return v
+              }
+            
+          }
+          return nil
+      }
+    static func sortCustomerUsingTotal() {
+           print("")
+           print("Customer details Sorted total bill to be paid\n")
+           let customers = custDictionary.sorted(by: {a,b in
+               return a.value.totalAmountToBePaidByCustomer > b.value.totalAmountToBePaidByCustomer
+           })
+           for newList in customers
+           {
+            if newList.value.totalAmountToBePaidByCustomer != 0.0
+            {
+               newList.value.displayNameSortedByTotal()
+            }
+            else{}
+        }
+        
+       }
+    
+    //Display Sort By Total
+    func displayNameSortedByTotal() {
+           
+        print("\t\tCustomer Id: \(customerID)\n" + "\t\tCustome Name: \(fullName)\n" + "\t\tCustomer Email: \(emailID!))\n")
+        print("\t\t*****************************\n")
+        print("\t\tTotal Amount to Pay: \(totalAmountToBePaidByCustomer.currency())\n")
+           print("\t\t****************************\n")
+       }
     
     func display() -> String {
             var output =  "Customer ID: \(customerID)\n" +

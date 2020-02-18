@@ -8,7 +8,7 @@
 
 import Foundation
 
-// Created Bill Class 
+// Created Bill Protocol
 protocol Bill : IDisplay
 {
     var billId : Int { get set}
@@ -27,7 +27,6 @@ func display() -> String
 func calculateTotal()->Float
 {
     let total : Float = 0
-   // totalBillAmount = total
     return total
 
 }

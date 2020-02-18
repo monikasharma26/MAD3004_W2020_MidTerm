@@ -4,7 +4,7 @@
 ## Added Below Groups to implement the structure
 
 ### *Customer Group*<br>
-* **Customer Class**: Holds details of customer and e=implemeted Bill Protocol
+* **Customer Class**: Holds details of customer and implemented  Protocol
 
 ### *Bills Group*<br>
 * **Mobiile Class**: Contains all stored Properties of itsemf and of bill protocol and implment methods
@@ -16,7 +16,6 @@
 
 ### *Protocoloes Group*<br>
 * **IDisplay Class**: protocol containing one method func display() -> String
-* **Float+Extension Class**: Class used for encrption and decryption of passwords
 
 ### *Extension Group*<br>
 * **Float+Extension Class**: Class  containing extension for currency,currency and internetUnit
@@ -28,7 +27,7 @@
 
 
 ### *Main Group*
-* **Main Class**: MainContains all object initializations as well as methods to display customer information with respect to their bills
+* **Main Class**: Main Contains all object initializations as well as methods to display customer information with respect to their bills
 
 
 ## REFERENCES

@@ -54,20 +54,24 @@ class Customer : IDisplay {
                 { throw CustomerError.emailInvalid   }
         
     }
-    
+    /* Add Bill To customers  */
     public func addBillToCustomer(bill: Bill)
     {
         customerBills.updateValue(bill, forKey: bill.billId)
     }
-        
+    
+    /*Add  customer */
     static func addCustomer(customer: Customer){
       custDictionary.updateValue(customer, forKey: customer.customerID)
       }
-        
+    
+    /* Remove  customers by CustomerID */
     static func removeCustomer(customer: Customer){
          custDictionary.removeValue(forKey: customer.customerID)
          }
     
+    
+    /*Get details of  customers by CustomerID */
     static func getCustomerByID(id:Int) -> Customer?
       {
           for (k,v) in custDictionary
@@ -80,6 +84,8 @@ class Customer : IDisplay {
           }
           return nil
       }
+    
+    /*Sort  details of  customers by Total Amount */
     static func sortCustomerUsingTotal() {
            print("")
            print("Customer details Sorted total bill to be paid\n")
@@ -97,7 +103,7 @@ class Customer : IDisplay {
         
        }
     
-    
+    /*Display Sorted Details customers  */
     func displayNameSortedByTotal() {
            
         print("\t\tCustomer Id: \(customerID)\n" + "\t\tCustome Name: \(fullName)\n" + "\t\tCustomer Email: \(emailID!))\n")
@@ -106,6 +112,7 @@ class Customer : IDisplay {
            print("\t\t****************************\n")
        }
     
+    /*Display All Details */
     func display() -> String {
             var output =  "Customer ID: \(customerID)\n" +
                 "Customer Full Name: \(fullName)\n"
